@@ -103,8 +103,6 @@ processors:
       copy_from: observer.serial_number
       ignore_failure: true
 
-<<<<<<< HEAD
-=======
 # Extract user domain from source and destination user
 
   - grok:
@@ -151,7 +149,6 @@ processors:
       copy_from: source.user
       if: ctx.source?.user != null
 
->>>>>>> main
 # Set @timestamp to the time when the entry was generated at the data plane.
   - date:
       if: ctx.event?.timezone == null
